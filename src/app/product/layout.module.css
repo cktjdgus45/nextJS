@@ -1,0 +1,9 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 16px;
+    margin-top: 9px;
+    border: 1px solid salmon;
+}
