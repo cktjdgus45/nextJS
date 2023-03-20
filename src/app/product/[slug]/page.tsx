@@ -20,10 +20,17 @@ const slug = ({ params }: Props) => {
 //어떤 경로에 한해서 미리 페이지를 만들수 있게 하기.
 //NEXTJS에게 함수로알려주기.
 export function generateStaticParams() {
-    const products = ['pants', 'skirt'];
+    const products = ['pants', 'skirt', 'shirts',];
     return products.map(product => ({
         slug: product
     }))
+}
+
+//SEO
+export function generateMetadata({ params }: Props) {
+    return {
+        title: `제품의 이름 ${params.slug}`
+    }
 }
 
 export default slug;
