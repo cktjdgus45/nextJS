@@ -1,6 +1,6 @@
-import './globals.css'
 import Link from 'next/link';
 import { Metadata } from 'next';
+import styles from './layout.module.css';
 
 export const metadata: Metadata = {
   title: 'nextJS PRACTICE',
@@ -16,12 +16,12 @@ export default function RootLayout({
     <html>
       <head />
       <body>
-        <header>
-          <h1>Demo Note</h1>
-          <nav>
-            <Link href='/about'>About</Link>
-            <Link href='/contact'>Contact</Link>
-            <Link href='/product'>Products</Link>
+        <header className={styles.header}>
+          <h1 className={styles.link}>Demo Note</h1>
+          <nav className={styles.nav}>
+            <Link className={styles.link} href='/about'>About</Link>
+            <Link className={styles.link} href='/contact'>Contact</Link>
+            <Link className={styles.link} href='/product'>Products</Link>
           </nav>
         </header>
         {children}

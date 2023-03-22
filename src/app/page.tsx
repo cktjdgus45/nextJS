@@ -1,6 +1,7 @@
 import { Inter } from 'next/font/google'
 import styles from './page.module.css'
 import Counter from '../components/Counter';
+import './globals.css';
 
 export default function Home() {
   return (
