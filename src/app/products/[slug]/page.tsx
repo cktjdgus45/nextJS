@@ -1,6 +1,7 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
 import { getProduct, getProducts } from '@/service/products';
+import Image from 'next/image';
 
 type Props = {
     params: {
@@ -16,6 +17,7 @@ const ProductPage = async ({ params: { slug } }: Props) => {
     return (
         <>
             {product.name} | product의 기본골격 페이지입니다 !
+            <Image src={`/images/${product.image}`} alt={product.name} width='300' height='300' />
         </>
     )
 }
