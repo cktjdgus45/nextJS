@@ -18,7 +18,7 @@ export default function RootLayout({
       <head />
       <body>
         <div className="app flex flex-col h-screen w-screen px-20">
-          <header className='p-5 text-2xl font-extrabold basis-[10%] bg-slate-400 flex items-center justify-between'>
+          <header className='p-5 text-2xl font-extrabold basis-[10%] flex items-center justify-between'>
             <h1>PoPo&apos;s Blog</h1>
             <nav>
               <Link className='text-sm ml-2 font-semibold' href='/'>home</Link>
@@ -27,10 +27,10 @@ export default function RootLayout({
               <Link className='text-sm ml-2 font-semibold' href='/products'>contact</Link>
             </nav>
           </header>
-          <main className='bg-slate-600 basis-[90%]'>
+          <main className='basis-[90%]'>
             {children}
           </main>
-          <footer className='text-white flex items-center justify-center basis-[5%] bg-slate-800 text-center'>@all rights reserved by popo</footer>
+          <footer className='bg-slate-500 p-5 text-white font-bold flex items-center justify-center basis-[5%] text-center'>@all rights reserved by popo</footer>
         </div>
       </body>
     </html>
