@@ -23,8 +23,8 @@ export default function RootLayout({
             <nav>
               <Link className='text-sm ml-2 font-semibold' href='/'>home</Link>
               <Link className='text-sm ml-2 font-semibold' href='/about'>about</Link>
-              <Link className='text-sm ml-2 font-semibold' href='/contact'>posts</Link>
-              <Link className='text-sm ml-2 font-semibold' href='/products'>contact</Link>
+              <Link className='text-sm ml-2 font-semibold' href='/posts'>posts</Link>
+              <Link className='text-sm ml-2 font-semibold' href='/contact'>contact</Link>
             </nav>
           </header>
           <main className='basis-[90%]'>

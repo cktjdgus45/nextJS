@@ -1,4 +1,3 @@
-import MeowArticle from '@/components/MeowArticle';
 import { getProducts } from '@/service/products';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -23,7 +22,6 @@ const ProductsPage = async () => {
                     </li>
                 ))}
             </ul>
-            <MeowArticle />
         </>
     )
 }
