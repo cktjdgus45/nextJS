@@ -1,8 +1,15 @@
+import ContactCard from '@/components/ContactCard';
+import SendMailForm from '@/components/SendMailForm';
 import React from 'react';
 
 const ContactPage = () => {
     return (
-        <>Contact us 페이지다 !!</>
+        <section className='w-full h-full flex justify-center'>
+            <div className='w-3/12 h-full flex flex-col justify-around items-center py-8'>
+                <ContactCard />
+                <SendMailForm />
+            </div>
+        </section>
     )
 }
 
