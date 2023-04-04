@@ -1,4 +1,4 @@
-import { sendMail } from '@/service/mail';
+import { sendMail } from '@/service/clientMail';
 import React from 'react';
 
 type MailInfo = {
