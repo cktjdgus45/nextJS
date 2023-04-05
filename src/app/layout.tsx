@@ -18,7 +18,7 @@ export default function RootLayout({
       <head />
       <body>
         <div className="app flex flex-col h-screen w-screen px-20">
-          <header className='p-5 text-2xl font-extrabold basis-[10%] flex items-center justify-between'>
+          <header className='py-5 text-2xl font-extrabold basis-[10%] flex items-center justify-between'>
             <h1>PoPo&apos;s Blog</h1>
             <nav>
               <Link className='text-sm ml-2 font-semibold' href='/'>home</Link>
