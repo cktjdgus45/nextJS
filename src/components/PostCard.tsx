@@ -1,5 +1,7 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
+
 
 type Prop = {
     post: {
@@ -15,7 +17,7 @@ type Prop = {
 const PostCard = (post: Prop) => {
     const { post: { title, description, date, category, path } } = post;
     return (
-        <div className=' flex flex-col shadow-md hover:shadow-lg duration-100 ease-linear'>
+        <Link href={`/posts/${path}`} className=' flex flex-col shadow-md hover:shadow-lg duration-100 ease-linear'>
             <div className='basis-[70%]'>
                 <Image className='rounded-t-md bg-center bg-contain w-full h-full' width={650} height={450} src={`/images/posts/${path}.png`} alt="proifle" />
             </div>
@@ -27,7 +29,7 @@ const PostCard = (post: Prop) => {
                     <span className='p-1'>{category}</span>
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
 

@@ -15,7 +15,7 @@ const CategoryGrid = ({ categories, selected, onClick }: Props) => {
                 <h1 className='text-bold font-bold mb-3 border-b-2 border-blue-400'>Category</h1>
                 <ul className='flex flex-col text-sm font-normal w-full items-center'>
                     {categories.map(category => (
-                        <li onClick={() => onClick(category)} key={category} id={category} className='cursor-pointer mb-2 hover:text-blue-400 focus:text-blue-400 ease-in-out duration-300 hover:text-base font-base'>{category}</li>
+                        <li onClick={() => onClick(category)} key={category} id={category} className={`cursor-pointer mb-2 hover:text-blue-400 focus:text-blue-400 ease-in-out duration-300 hover:text-base font-base ${category === selected && 'text-sky-600'}`}>{category}</li>
                     ))}
                 </ul>
             </div>
