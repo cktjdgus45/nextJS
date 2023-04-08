@@ -1,6 +1,12 @@
 import ContactCard from '@/components/ContactCard';
 import ContactForm from '@/components/ContactForm';
+import { Metadata } from 'next';
 import React from 'react';
+
+export const metadata: Metadata = {
+    title: 'Contact Me',
+    description: '포포에게 메일 보내기'
+}
 
 const ContactPage = () => {
     return (
