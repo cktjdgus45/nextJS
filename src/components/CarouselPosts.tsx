@@ -9,6 +9,7 @@ const CarouselPosts = async () => {
         <section>
             <h2 className='mt-5 font-extrabold text-xl mb-3'>You May Like</h2>
             <MulitCarousel>
+
                 {posts.map((post) => (
                     <PostCard key={post.path} post={post} />
                 ))}

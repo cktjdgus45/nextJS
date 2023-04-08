@@ -1,4 +1,4 @@
-import { sendMail } from '@/service/clientMail';
+import { sendContactEmail } from '@/service/clientMail';
 import React from 'react';
 
 type MailInfo = {
@@ -10,10 +10,10 @@ type MailInfo = {
 }
 
 const SubmitButton = (props: MailInfo) => {
-    const { mail } = props;
+    const { mail: { to, subject, text } } = props;
     const onMailFormSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        sendMail(mail);
+        sendContactEmail({ from: to, subject: subject, message: text });
     }
     return (
         <button onSubmit={onMailFormSubmit} className='bg-yellow-300 w-full text-xs font-light' type="submit">Submit</button>

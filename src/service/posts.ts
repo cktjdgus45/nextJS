@@ -1,6 +1,7 @@
 import path from 'path';
 import { promises as fs, readFile } from 'fs';
 import { Category } from './category';
+import { cache } from 'react';
 
 export type Post = {
     title: string;
@@ -17,6 +18,12 @@ export type PostData = Post & {
     , prev: Post | null
 };
 
+export const getPosts = cache(async (): Promise<Post[]> => {
+    const filePath = path.join(process.cwd(), 'data', 'posts.json');
+    const data = await fs.readFile(filePath, 'utf-8');
+    return JSON.parse(data);
+});
+
 export const getFeaturedPosts = (): Promise<Post[]> => {
     return getPosts()
         .then(posts => posts.filter(post => post.featured));
@@ -29,12 +36,6 @@ export const getNonFeaturedPosts = (): Promise<Post[]> => {
 export const getFilteredPostsByCategory = (category: Category) => {
     return getPosts()
         .then(posts => posts.filter(post => post.category === category));
-}
-
-export const getPosts = async (): Promise<Post[]> => {
-    const filePath = path.join(process.cwd(), 'data', 'posts.json');
-    const data = await fs.readFile(filePath, 'utf-8');
-    return JSON.parse(data);
 }
 
 export const getPostData = async (fileName: string): Promise<PostData> => {

@@ -1,6 +1,6 @@
 import AdjacentPostCard from '@/components/AdjacentPostCard';
 import PostContent from '@/components/PostContent';
-import { getPostData } from '@/service/posts';
+import { getFeaturedPosts, getPostData } from '@/service/posts';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import React from 'react';
@@ -38,3 +38,10 @@ const PostSlugPage = async ({ params: { slug } }: Props) => {
 }
 
 export default PostSlugPage;
+
+export const generateStaticParams = async () => {
+    const posts = await getFeaturedPosts();
+    return posts.map(post => ({
+        slug: post.path
+    }))
+}
