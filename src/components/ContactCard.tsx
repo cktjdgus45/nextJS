@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import { BsGithub } from 'react-icons/bs';
 import { BsLinkedin } from 'react-icons/bs';
@@ -9,7 +10,9 @@ const ContactCard = () => {
             <h1 className='font-extrabold text-2xl'>Contact me</h1>
             <span className='my-3'>cktjdgus45@naver.com</span>
             <div className='flex text-2xl mb-4'>
-                <BsGithub />
+                <Link href='https://github.com/cktjdgus45'>
+                    <BsGithub />
+                </Link>
                 <BsLinkedin className='mx-3' />
                 <BsYoutube />
             </div>
